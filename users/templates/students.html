@@ -1,0 +1,10 @@
+<h1>Hello {{name}}</h1>
+<h1>Users List</h1>
+
+{% for user in users %}
+
+    <h2>{{ user.name }}</h2>
+
+    <p>{{ user.age }}</p>
+
+{% endfor %}

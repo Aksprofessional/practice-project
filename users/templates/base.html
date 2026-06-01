@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Django App</title>
+
+</head>
+
+<body>
+
+    <h1>My Django Website</h1>
+
+    <hr>
+
+    <a href="/users/">Users</a>
+
+    <a href="/add/">Add User</a>
+
+    <a href="/adults/">Adults</a>
+
+    <a href="/signup/">Signup</a>
+
+    <a href="/logout/">Logout</a>
+
+    <hr>
+
+    {% if messages %}
+
+        {% for message in messages %}
+
+            <p>{{ message }}</p>
+
+        {% endfor %}
+
+    {% endif %}
+
+    {% block content %}
+
+    {% endblock %}
+
+</body>
+
+</html>

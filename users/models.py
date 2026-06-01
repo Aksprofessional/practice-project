@@ -1,0 +1,12 @@
+from django.db import models
+from django.contrib.auth.models import User
+
+# Create your models here.
+class users(models.Model):
+    name=models.CharField(max_length=100)
+    age=models.IntegerField()
+
+class ToDo(models.Model):
+    completed=models.BooleanField(default=False)
+    task=models.TextField()
+    user=models.ForeignKey(User,on_delete=models.CASCADE)
